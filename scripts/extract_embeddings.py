@@ -1,6 +1,6 @@
 # USAGE
 # python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle \
-#	--detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
+#	--prototxt models/deploy.prototxt --caffe-model models/res10_300x300_ssd_iter_140000.caffemodel --embedding-model models/openface_nn4.small2.v1.t7
 
 # import the necessary packages
 from imutils import paths
@@ -18,9 +18,9 @@ ap.add_argument("-i", "--dataset", required=True,
 ap.add_argument("-e", "--embeddings", required=True,
 	help="path to output serialized db of facial embeddings")
 ap.add_argument("-p", "--prototxt", required=True,
-	help="path to OpenCV's deep learning face detector")
+	help="path to OpenCV's deep learning face detector prototxt")
 ap.add_argument("-a", "--caffe-model", required=True,
-	help="path to OpenCV's deep learning face detector")
+	help="path to OpenCV's deep learning face detector model")
 ap.add_argument("-m", "--embedding-model", required=True,
 	help="path to OpenCV's deep learning face embedding model")
 ap.add_argument("-c", "--confidence", type=float, default=0.5,

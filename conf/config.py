@@ -1,7 +1,7 @@
 # import necessary packages
 from os import path
 
-# DATASET_DIR = path.sep.join(["/media", "djav", "Data", "datasets", "openface"])
+# DATASET_DIR = path.sep.join(["/path", "to", "dataset"])
 DATASET_DIR = "dataset"
 IMAGES_DIR  = "images"
 SCRIPT_DIR  = "scripts"
@@ -11,7 +11,7 @@ MODELS_DIR  = "models"
 PROTO_NAME = "deploy.prototxt"
 CAFFE_NAME = "res10_300x300_ssd_iter_140000.caffemodel"
 EMB_MODEL_NAME  = "openface_nn4.small2.v1.t7"
-RECOGNIZER_NAME = "recognizerv2.pickle"
+RECOGNIZER_NAME = "recognizer.pickle"
 LABEL_ENCO_NAME = "labelencoder.pickle"
 FEATURES_NAME   = "features.pickle"
 
